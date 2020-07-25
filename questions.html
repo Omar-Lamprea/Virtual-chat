@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Questions</title>
+	</head>
+	<body>
+		<style type="text/css">
+			.age, .search{
+		display: none;
+		}
+		</style>
+		<p>Chat:</p>
+		<form>
+			<label>What is your name?</label>
+			<input type="text" id="name">
+			<input type="button" value="ok" id="ok">
+		</form>
+		<p id="greet"></p>
+		<form class="age" id="age">
+			<label>How old are you?</label>
+			<input type="number" id="ageText">
+			<input type="button" value="😁" id="ageButton">
+		</form>
+		<p id="ageReply"></p>
+		<form class="search" id="search">
+			<label>what do you want to do today?</label>
+			<input type="text" id="question3">
+			<input type="button" value="go!" id="question3Button">
+		</form>
+		<script>
+			/*first question*/
+		const box = document.getElementById('name')
+		const ok = document.getElementById('ok')
+		const greet = document.getElementById('greet')
+		const age = document.getElementById('age')
+		function saludar(){
+		greet.innerHTML = 'Hi ' + box.value + '!!😁'
+		age.style.display = "block"
+		}
+		/*second question*/
+		const ageReply = document.getElementById('ageReply')
+		const ageText = document.getElementById('ageText')
+		const search = document.getElementById('search')
+		function ageQuestion(){
+		ageReply.innerHTML = 'Mmmm.. ' + ageText.value + ', Cool!!'
+		search.style.display = 'block'
+		}
+		/*third question*/
+		const question3 = document.getElementById('question3')
+		const searchURL = "https://www.google.com/search?q="
+		function searchInGoogle(){
+		window.open(searchURL + question3.value)
+		}
+		ok.addEventListener('click', saludar)
+		ageButton.addEventListener('click', ageQuestion)
+		question3Button.addEventListener('click', searchInGoogle)
+		</script>
+		
+	</body>
+</html>

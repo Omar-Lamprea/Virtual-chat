@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Questions</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<header class="image">
+		<figure >
+			<img src="conversation.svg" width="150px">
+		</figure>
+	</header>
+	<section class="container-chat">
+		<div class="chat">
+			<form class="message">
+				<label>What is your name?</label>
+			</form>
+			<p class="reply" id="reply"></p>
+			<p id="greet" class="message"></p>
+
+			<form class="age message" id="age">
+				<label>How old are you?</label>
+			</form>
+			<p class="reply" id="reply2"></p>
+			<p id="ageReply" class="message"></p>
+
+			<form class="search message" id="search">
+				<label>what do you want to do today?</label>
+			</form>
+		</div>
+	</section>
+
+	<section class="write-box" id="write-box">
+		<input type="text" placeholder="Type a message" id="writeBox">
+		<button>
+			<img src="send.svg" width="20px" id="send">
+		</button>
+	</section>
+
+	<section class="write-box2" id="write-box2">
+		<input type="number" placeholder="Type a message" id="writeBox2">
+		<button>
+			<img src="send.svg" width="20px" id="send2">
+		</button>
+	</section>
+
+	<section class="write-box3" id="write-box3">
+		<input type="text" placeholder="Type a message" id="writeBox3">
+		<button>
+			<img src="send.svg" width="20px" id="send3">
+		</button>
+	</section>
+
+	<script src="main.js"></script>
+</body>
+</html>
